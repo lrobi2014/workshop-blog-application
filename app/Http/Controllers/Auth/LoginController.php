@@ -25,7 +25,14 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
+
+    /**
+     * Fields that are mass assignable
+     *
+     * @var array
+     */
+    protected $guarded = [];
 
     /**
      * Create a new controller instance.
