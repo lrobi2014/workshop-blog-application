@@ -16,20 +16,16 @@ class PostsController extends Controller
 
     /**
      * Show posts.
-     *
-     * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(): \Illuminate\Http\Response
     {
         return view('posts', ['posts' => Post::all()]);
     }
 
     /**
      * Show a specific post
-     *
-     * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show(Post $post): \Illuminate\Http\Response
     {
         return view('post')->with(
             [
@@ -40,11 +36,8 @@ class PostsController extends Controller
 
     /**
      * Persist post to database
-     *
-     * @param  Request $request
-     * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create(Request $request): \Illuminate\Http\Response
     {
 
         $post = Auth::user()->posts()->create(
